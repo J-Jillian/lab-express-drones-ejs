@@ -1,1 +1,20 @@
 <h2>Available drones</h2>
+
+<% drones.forEach(({ name, propellers, maxSpeed, id}) => { %>
+    <div style="border: 1px solid black; width: 300px; margin: 20px">
+      <h4><%= name %></h4>
+      <h5><%= propellers %></h5>
+      <h6><%= maxSpeed %></h6>
+      </div>
+      <div>
+    <a href="/drones">View Drones</a>
+    <a href="/drones/<%= id %>/edit">Update drone</a>
+    <form action="/drones/<%= id %>/delete" method="POST">
+    <button type="submit">Delete</button>
+    </form>
+    </div>
+      
+    <% }) %>
+    
+   
+    
